@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter host"
+        android:layout_margin="10dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etPingLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter ping limit"
+        android:layout_below="@id/etHost"
+        android:layout_margin="10dp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnPing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPingLimit"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="8dp"
+        android:text="Ping" />
+
+    <Button
+        android:id="@+id/btnPaste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPingLimit"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@id/btnPing"
+        android:text="Paste" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etPingLimit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@id/btnPaste"
+        android:text="Clear" />
+
+    <Button
+        android:id="@+id/btnCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnClear"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Copy" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnClear"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@+id/btnCopy"
+        android:text="Stop" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/btnCopy"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tvPingResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ping Result:"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollView2"
+        android:layout_margin="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Statistics:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>
